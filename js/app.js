@@ -1,4 +1,5 @@
-
+var TILE_WIDTH = 101,
+    TILE_HEIGHT = 83;
 
 // Enemies our player must avoid
 var Enemy = function(x,y) {
@@ -34,6 +35,10 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+/*var Character = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+*/
 // Now write your own player class
 var Player = function(){
     this.sprite = 'images/char-boy.png';
@@ -53,16 +58,18 @@ Player.prototype.render = function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
+
 // a handleInput() method.
 Player.prototype.handleInput = function(dir){
     if(dir == 'left' && this.x > -50 )
-        this.x -= 50;
+        this.x -= TILE_WIDTH/2;
     if(dir == 'right' && this.x <400)
-        this.x += 50;
+        this.x += TILE_WIDTH/2;
     if(dir == 'up' && this.y >0)
-        this.y -= 50;
+        this.y -= TILE_HEIGHT/2;
     if(dir == 'down' && this.y < 400)
-        this.y += 50;
+        this.y += TILE_HEIGHT/2;
 };
 
 Player.prototype.reset = function(){
@@ -81,9 +88,6 @@ var enemy6 = new Enemy(-500, 230);
 var allEnemies = [enemy1,enemy2,enemy3,enemy4,enemy5,enemy6];
 
 var player = new Player();
-
-
-
 
 
 // Now instantiate your objects.
