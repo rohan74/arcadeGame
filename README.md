@@ -2,7 +2,7 @@
 This is a part of Udacity Front End Developer Nanodegree.  
 
 # Description
-In this project used HTML canvas to build a playground for the game. Used JavaScript’s object oriented programming feature to write Player and Enemey function. The goal of the player is to reach the water, without colliding into any one of the enemies.
+In this project used HTML canvas to build a playground for the game. Used JavaScript’s object oriented programming feature to write Player and Enemy function. The goal of the player is to reach the water, without colliding into any one of the enemies.
 
 # Instruction 
 1. Clone this repository and open index.html 
